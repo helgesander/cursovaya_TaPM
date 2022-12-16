@@ -33,4 +33,4 @@ def cart_detail(request):
                               initial={'quantity': item['quantity'],
                               'update': True})
     coupon_apply_form = CouponApplyForm()
-    return render(request, 'cart/detail.html', {'cart': cart, 'coupon_aply_form': coupon_apply_form})
+    return render(request, 'cart/detail.html', {'cart': cart, 'form': coupon_apply_form})

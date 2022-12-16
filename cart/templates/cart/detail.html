@@ -69,12 +69,13 @@
     </tbody>
   </table>
   <form action="{% url "coupons:apply" %}" method="post">
-    {{ coupon_apply_form }}
-    <input type="submit" value="Apply">{% csrf_token %}
-    </form>
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Apply">
+  </form>
   <p class="text-right">
     <a href="{% url 'shop:product_list' %}" class="button light">Continue shopping</a>
-    <a href="{% url 'orders:order_create' %}">
+    <a href="{% url 'orders:order_create' %}" class="button">
       Checkout
     </a>
   </p>
